@@ -100,7 +100,8 @@ module.exports = {
         docs: {
           path: "./docs",
           sidebarPath: require.resolve("./sidebars.json"),
-          editUrl: "https://github.com/cyps1000/react-material-cli-docs",
+          editUrl:
+            "https://github.com/cyps1000/react-material-cli-docs/tree/main",
           showLastUpdateAuthor: true,
           showLastUpdateTime: true
         },

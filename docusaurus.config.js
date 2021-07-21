@@ -1,109 +1,113 @@
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
-  url: 'https://your-docusaurus-test-site.com',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  title: "react-material-cli",
+  tagline:
+    "Generate custom react components and hooks that follow best practices and the highest standards of implementation.",
+  url: "https://your-docusaurus-test-site.com",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/favicon.ico",
+  organizationName: "EricPuskas",
+  projectName: "react-material-cli-docs",
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "ro", "hu"]
+  },
   themeConfig: {
     navbar: {
-      title: 'My Site',
+      items: [
+        {
+          type: "localeDropdown"
+        }
+      ],
+      title: "react-material-cli",
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: "My Site Logo",
+        src: "img/logo.svg"
       },
       items: [
         {
-          type: 'doc',
-          docId: 'intro',
-          position: 'left',
-          label: 'Tutorial',
+          type: "doc",
+          docId: "getting-started",
+          position: "right",
+          label: "Docs"
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
-          label: 'GitHub',
-          position: 'right',
+          type: "localeDropdown",
+          position: "right"
         },
-      ],
+        {
+          href: "https://github.com/EricPuskas/react-material-cli",
+          label: "GitHub",
+          position: "right"
+        },
+        {
+          type: "search",
+          position: "right"
+        }
+      ]
     },
     footer: {
-      style: 'dark',
+      style: "dark",
       links: [
         {
-          title: 'Docs',
+          title: "Docs",
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
+              label: "Get Started",
+              to: "/docs/getting-started"
+            }
+          ]
         },
         {
-          title: 'Community',
+          title: "Community",
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: "Discord",
+              href: "#"
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
-            },
-          ],
+              label: "GitHub Discussions",
+              href: "https://github.com/EricPuskas/react-material-cli/discussions/"
+            }
+          ]
         },
         {
-          title: 'More',
+          title: "Social",
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
-            },
-          ],
-        },
+              label: "GitHub",
+              href: "https://github.com/EricPuskas/react-material-cli"
+            }
+          ]
+        }
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `MIT License. Copyright © ${new Date().getFullYear()} Eric Puskas`
     },
     prism: {
       theme: lightCodeTheme,
-      darkTheme: darkCodeTheme,
-    },
+      darkTheme: darkCodeTheme
+    }
   },
   presets: [
     [
-      '@docusaurus/preset-classic',
+      "@docusaurus/preset-classic",
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/',
-        },
-        blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/edit/master/website/blog/',
+          path: "./docs",
+          sidebarPath: require.resolve("./sidebars.json"),
+          editUrl: "https://github.com/cyps1000/react-material-cli-docs",
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true
         },
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
-        },
-      },
-    ],
-  ],
+          customCss: require.resolve("./src/css/custom.css")
+        }
+      }
+    ]
+  ]
 };
